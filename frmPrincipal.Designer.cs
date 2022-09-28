@@ -57,7 +57,7 @@
             // bibliotecaToolStripMenuItem
             // 
             this.bibliotecaToolStripMenuItem.Name = "bibliotecaToolStripMenuItem";
-            this.bibliotecaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bibliotecaToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.bibliotecaToolStripMenuItem.Text = "Biblioteca";
             this.bibliotecaToolStripMenuItem.Click += new System.EventHandler(this.bibliotecaToolStripMenuItem_Click);
             // 
@@ -76,6 +76,7 @@
             this.Controls.Add(this.mspMenu);
             this.MainMenuStrip = this.mspMenu;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.mspMenu.ResumeLayout(false);
             this.mspMenu.PerformLayout();

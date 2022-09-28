@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBiblioteca));
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblCodigoEditorial = new System.Windows.Forms.Label();
             this.lblNombreLibro = new System.Windows.Forms.Label();
             this.lblCodigoAutor = new System.Windows.Forms.Label();
             this.lblCodigoDistruibidor = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
-            this.txtNombreLibro = new System.Windows.Forms.TextBox();
             this.txtCodigoEditorial = new System.Windows.Forms.TextBox();
             this.txtCodigoAutor = new System.Windows.Forms.TextBox();
             this.txtCodigoDistruibidor = new System.Windows.Forms.TextBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
-            this.lstLibros = new System.Windows.Forms.ListBox();
+            this.lstCodigo = new System.Windows.Forms.ListBox();
+            this.lstNombreLibro = new System.Windows.Forms.ListBox();
+            this.pbxFondo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFondo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -93,20 +95,6 @@
             this.lblCodigoDistruibidor.TabIndex = 4;
             this.lblCodigoDistruibidor.Text = "Codigo Distriubidor";
             // 
-            // txtCodigo
-            // 
-            this.txtCodigo.Location = new System.Drawing.Point(182, 12);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(72, 20);
-            this.txtCodigo.TabIndex = 5;
-            // 
-            // txtNombreLibro
-            // 
-            this.txtNombreLibro.Location = new System.Drawing.Point(182, 53);
-            this.txtNombreLibro.Name = "txtNombreLibro";
-            this.txtNombreLibro.Size = new System.Drawing.Size(141, 20);
-            this.txtNombreLibro.TabIndex = 6;
-            // 
             // txtCodigoEditorial
             // 
             this.txtCodigoEditorial.Location = new System.Drawing.Point(182, 96);
@@ -150,35 +138,55 @@
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
-            // lstLibros
+            // lstCodigo
             // 
-            this.lstLibros.FormattingEnabled = true;
-            this.lstLibros.Location = new System.Drawing.Point(111, 247);
-            this.lstLibros.Name = "lstLibros";
-            this.lstLibros.Size = new System.Drawing.Size(120, 95);
-            this.lstLibros.TabIndex = 12;
+            this.lstCodigo.FormattingEnabled = true;
+            this.lstCodigo.Location = new System.Drawing.Point(182, 15);
+            this.lstCodigo.Name = "lstCodigo";
+            this.lstCodigo.Size = new System.Drawing.Size(41, 17);
+            this.lstCodigo.TabIndex = 12;
+            // 
+            // lstNombreLibro
+            // 
+            this.lstNombreLibro.FormattingEnabled = true;
+            this.lstNombreLibro.Location = new System.Drawing.Point(182, 53);
+            this.lstNombreLibro.Name = "lstNombreLibro";
+            this.lstNombreLibro.Size = new System.Drawing.Size(159, 17);
+            this.lstNombreLibro.TabIndex = 13;
+            // 
+            // pbxFondo
+            // 
+            this.pbxFondo.Image = ((System.Drawing.Image)(resources.GetObject("pbxFondo.Image")));
+            this.pbxFondo.Location = new System.Drawing.Point(-3, 0);
+            this.pbxFondo.Name = "pbxFondo";
+            this.pbxFondo.Size = new System.Drawing.Size(357, 256);
+            this.pbxFondo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxFondo.TabIndex = 14;
+            this.pbxFondo.TabStop = false;
             // 
             // frmBiblioteca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(428, 447);
-            this.Controls.Add(this.lstLibros);
+            this.ClientSize = new System.Drawing.Size(351, 256);
+            this.Controls.Add(this.lstNombreLibro);
+            this.Controls.Add(this.lstCodigo);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.txtCodigoDistruibidor);
             this.Controls.Add(this.txtCodigoAutor);
             this.Controls.Add(this.txtCodigoEditorial);
-            this.Controls.Add(this.txtNombreLibro);
-            this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigoDistruibidor);
             this.Controls.Add(this.lblCodigoAutor);
             this.Controls.Add(this.lblNombreLibro);
             this.Controls.Add(this.lblCodigoEditorial);
             this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.pbxFondo);
             this.Name = "frmBiblioteca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Biblioteca";
             this.Load += new System.EventHandler(this.frmBiblioteca_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFondo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,13 +199,13 @@
         private System.Windows.Forms.Label lblNombreLibro;
         private System.Windows.Forms.Label lblCodigoAutor;
         private System.Windows.Forms.Label lblCodigoDistruibidor;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtNombreLibro;
         private System.Windows.Forms.TextBox txtCodigoEditorial;
         private System.Windows.Forms.TextBox txtCodigoAutor;
         private System.Windows.Forms.TextBox txtCodigoDistruibidor;
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.ListBox lstLibros;
+        private System.Windows.Forms.ListBox lstCodigo;
+        private System.Windows.Forms.ListBox lstNombreLibro;
+        private System.Windows.Forms.PictureBox pbxFondo;
     }
 }
